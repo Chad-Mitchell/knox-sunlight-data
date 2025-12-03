@@ -1,0 +1,22 @@
+name: Weekly Sunlight Drop
+on:
+  schedule:
+    - cron: '0 3 * * 0'   # Every Sunday 03:00 UTC
+  workflow_dispatch:      # manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pull latest data from n8n webhook
+        run: |
+          curl -X POST https://YOUR-N8N-WEBHOOK-URL
+      - name: Commit if changed
+        run: |
+          git config user.name "Sunlight Bot"
+          git config user.email "bot@sunlight"
+          git add data/
+          git diff --quiet && exit 0
+          git commit -m "Weekly data drop $(date +'%Y-%m-%d')"
+          git push

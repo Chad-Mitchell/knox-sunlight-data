@@ -1,0 +1,6 @@
+# Temporary files
+*.tmp
+*.log
+
+# Never commit API keys (even though we don’t use any here)
+.env

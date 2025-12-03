@@ -1,0 +1,10 @@
+knox-sunlight-data/
+├── README.md
+├── LICENSE              ← MIT License (standard)
+├── .gitignore
+├── data/
+│   └── placeholder.csv  ← tiny dummy file so the folder is tracked
+├── query.html           ← single-file in-browser explorer (works day-1)
+└── .github/
+    └── workflows/
+        └── auto-update.yml  ← GitHub Action (optional but beautiful)

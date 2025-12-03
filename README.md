@@ -24,3 +24,6 @@ https://github.com/Chad-Mitchell/sunlight
 
 This repo contains **only data**.  
 Nothing else.
+
+## Why some edges look large
+Many of the biggest money flows in this dataset are legally enabled by Tennessee’s Tax Increment Financing (TIF) statutes and Industrial Development Board authorities. The graph simply shows what the law already allows.
